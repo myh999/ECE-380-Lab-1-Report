@@ -1,0 +1,129 @@
+\documentclass[oneside, 12pt]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newpxtext,newpxmath}
+\usepackage[left=1in, right=1in, top=1.25in, bottom=1.25in]{geometry}
+\usepackage{hyperref}
+\usepackage{titling}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+
+% Force Floats to stay within their sections. Normally this is
+% VERY BAD PRACTICE. But for these lab reports it better to organize
+% this way. You could also not use floats (figures/table) and just
+% plop in the includegraphics and tabular environments but meh.
+\usepackage[section]{placeins}
+
+%% BEGIN PREAMBLE (You Shouldn't Have to Touch This)
+\newcounter{CountOne}
+\setcounter{CountOne}{1}
+\setsecnumdepth{subsection}
+
+% Chapter stuff
+\renewcommand{\printchaptername}{{\chapnamefont Lab}}
+\renewcommand{\afterchapternum}{:~}
+%% END PREAMBLE (You Shouldn't Have to Touch This)
+
+% Set The Lab Number Here
+\newcounter{Lab}
+\setcounter{Lab}{1}
+
+\begin{document}
+
+%% BEGIN TITLE
+\begin{titlingpage}
+    \begin{center}
+    
+        % EDIT YOUR GROUP NUMBER HERE
+        {\LARGE\bfseries\scshape%
+            {ECE 380 Lab \theLab~Report}\\[0.5em]
+            Group 26
+        }
+        
+        \vspace{5em}
+        
+        % Set the Authors Here!
+        % Two Names, Two Student IDS, Two Emails.
+        \begin{tabular}{ccc}
+            Max Yiming Hao          &           & <Name>\\
+            20710121                &           & <Student Id>\\
+            myhao@uwaterloo.ca   &           & <UWaterloo Email>
+        \end{tabular}
+        
+        % Aside: That's not my real student ID. Nice try.
+        
+        \tableofcontents*
+    \end{center}
+\end{titlingpage}
+%% END TITLE
+
+% Here I used the Lab Number to set the Chapter Index. It
+% has to be one less, as the \chapter command advances the
+% counter.
+\setcounter{chapter}{\the\numexpr\theLab-\theCountOne\relax}
+
+% Name of Lab
+\chapter{System Identification Fundamentals}
+
+% Your deliverables come here. Notice the numbering is *implicit* by the
+% number of sections you introduce.
+\section{Deliverable 1}
+Jonathan
+
+\section{Deliverable 2}
+Jonathan
+
+\section{Deliverable 3}
+Max
+
+\section{Deliverable 4}
+Max
+
+\section{Deliverable 5}
+Jonathan
+
+\section{Deliverable 6}
+Jonathan
+
+\section{Deliverable 7}
+\subsection{Question 1}
+Max
+
+\subsection{Question 2}
+Max
+
+\subsection{Question 3}
+Max
+
+\subsection{Question 4}
+Max
+
+\subsection{Question 5}
+Max
+
+\subsection{Question 6}
+Max
+
+\subsection{Question 7}
+Max
+
+\subsection{Question 8}
+Max
+
+\subsection{Question 9}
+Jonathan
+
+\subsection{Question 10}
+Jonathan
+
+\subsection{Question 11}
+Jonathan
+
+\subsection{Question 12}
+Jonathan
+
+\end{document}
